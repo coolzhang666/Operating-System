@@ -93,6 +93,12 @@ int main()
             printf("input something:");
             // scanf("%s", bufin);
             fgets(bufin, sizeof(bufin), stdin);
+
+            if(strcmp(bufin, "exit\n") == 0)
+            {
+                unlock(fid);
+                break;
+            }
             
             lseek(fid, 0, SEEK_END); // 移动文件指针到文件末尾
             index = write(fid, bufin, strlen(bufin)); // 向文件中写入数据并记录写入数据的长度
@@ -107,7 +113,6 @@ int main()
             else
             {
                 unlock(fid); // 解锁文件
-                sleep(1);
             }
             wait(NULL); // 等待子进程结束
         }
