@@ -1,0 +1,23 @@
+#top {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 40px;
+    /*-fx-background-color: pink;*/
+    -fx-font-size: 20px;
+}
+
+#right {
+    -fx-pref-width: 250px;
+    -fx-pref-height: 100%;
+    /*-fx-background-color: gray;*/
+}
+
+#left {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 100%;
+    /*-fx-background-color: red;*/
+}
+
+#center {
+    -fx-pref-width: 100%;
+    -fx-pref-height: 100%;
+}
